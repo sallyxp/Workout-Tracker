@@ -1,10 +1,17 @@
 let mongoose = require("mongoose");
-let db = require("../models");
+let db = require("../models/");
+console.log(db);
 
 mongoose.connect("mongodb://localhost/workout", {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useFindAndModify: false, 
+  useUnifiedTopology: true,
+  useCreateIndex: true
+
 });
+
+mongoose.connection.on('connected', () => console.log('Connected to MongoDB Endpoint'));
+mongoose.connection.on('error', (err) => console.log(`Mongoose default connection error: ${err}`));
 
 let workoutSeed = [
   {
