@@ -69,13 +69,14 @@ module.exports = function (app) {
 
 
     //POST create a new workout
-      app.post("/api/workouts", (req, res) => {
-          db.Workout.create({}).then(data => {
-            console.log("data", data);
-            res.json(data);
-          })
-            .catch(err => {
-              res.json(err);
-            });
-        })
+    //  app.post("/api/workouts", (req, res) => {
+    //      db.Workout.create({}).then(data => {
+    //        console.log("data", data);
+    //        res.json(data);
+    //      })
+    //        .catch(err => {
+    //          res.json(err);
+    //        });
+    //    })
 }
+module.exports = app;
