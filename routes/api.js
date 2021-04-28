@@ -66,18 +66,6 @@ router.post("/api/workouts", (req, res) => {
         });
 });
 
-totalDurationSum = () => {
-    const calcTotalDuration = db.Workout.exercises.aggregate([{
-      $group: {
-          _id: null,
-          totalDuration: {
-              $sum: "$exercises.duration"
-          }
-      }
-  }]);
-  
-  console.log(calcTotalDuration);
-  return calcTotalDuration;
-  }
+
 
 module.exports = router;
