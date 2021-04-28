@@ -9,23 +9,8 @@ var path = require("path");
 // connect to middleware
 
 
-//get index.html page
-router.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-});
-
-//get exercise html page    
-router.get("/exercise", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/exercise.html"));
-});
-
-//get stats page
-router.get("/stats", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/stats.html"));
-});
-
 //get all workouts
-router.get("/all", (req, res) => {
+router.get("/workouts", (req, res) => {
     db.Workout.find({})
         .then(data => {
             res.json(data);
@@ -46,6 +31,7 @@ router.get("/api/workouts", (req, res) => {
         });
 });
 
+//update an existing exercise
 router.put("/api/workouts/:id", (req, res) => {
     Workout.findOneAndUpdate(
         { _id: req.params.id },
@@ -80,5 +66,18 @@ router.post("/api/workouts", (req, res) => {
         });
 });
 
+totalDurationSum = () => {
+    const calcTotalDuration = db.Workout.exercises.aggregate([{
+      $group: {
+          _id: null,
+          totalDuration: {
+              $sum: "$exercises.duration"
+          }
+      }
+  }]);
+  
+  console.log(calcTotalDuration);
+  return calcTotalDuration;
+  }
 
 module.exports = router;
