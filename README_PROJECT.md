@@ -9,11 +9,7 @@ https://stormy-tundra-13684.herokuapp.com/
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#Credits) 
-- [Contributing](#contributing)
-- [Authors](#authors)
-- [Screenshots](#screenshots)
-- [Video](#video)
-- [Tests](#tests)
+- [Contributing and Questions](#contributing)
 - [Contact Me](#contact-me)
 
 This system has the following landing page:
@@ -51,7 +47,16 @@ The Stats Page
  2. Livvy Owen for pointing me in the right direction.
  3. Ben Ashley for his help and explanations regarding express Router.
 
- 
+## *Contributing and Questions*
+For any suggestions or questions, please feel free to contact us via our Github pages shown below.
+
+##Contact Me
+Sally Rodgers https://github.com/sallyxp
+LinkedIn: **[Sally Rodgers](www.linkedin.com/in/sallyhello1
+
+This project is MIT licensed. ![license](https://img.shields.io/static/v1?label=license&message=MIT&color=blueviolet) 
+&copy;
+
 
 
 
