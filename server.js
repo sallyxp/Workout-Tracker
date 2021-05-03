@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //need to change 'budget' to name of db - workout
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/stormy-tundra-13684", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/secret-plateau-88546", {
   useNewUrlParser: true,
   useFindAndModify: false, 
   useUnifiedTopology: true,
