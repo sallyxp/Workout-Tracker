@@ -2,7 +2,8 @@
 This repository creates a workout tracker using a Mongo database with a Mongoose schema and routes using Express.
 Partial code was provided but no design for the models.  It was necessary to reverse-engineer the fields, the server and the routes to make the project functional.
 This is the link to the Heroku deployment:  
-https://stormy-tundra-13684.herokuapp.com/
+
+https://dry-sea-03304.herokuapp.com/
 
 ## *Table of Contents*
 - [Description](#description)
